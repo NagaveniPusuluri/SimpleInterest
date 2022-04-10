@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+    </head>
+    <body>
+        <div id="container">
+        <label>Amount:
+            <input type="number" id="amount">
+        </label><br>
+        <label>Rate:
+            <input type="number" id="rate(%)">
+        </label><br>    
+        <label>Years:
+            <input type="number" id="year">
+        </label><br>
+            <button onclick="answer()">Calculate Interest</button>
+            <p>Simple Interest:<span id="output"></span></p>
+        
+        </div>
+        <script>
+            function answer(){
+                var amount_value=parseInt(document.getElementById("amount").value);
+                var rate_value=parseInt(document.getElementById("rate(%)").value);
+                var time_value=parseInt(document.getElementById("year").value);
+                var interest=amount_value*rate_value*time_value/100;
+                
+                document.getElementById("output").innerHTML=interest;
+            }
+        </script>
+    </body>
+</html>
